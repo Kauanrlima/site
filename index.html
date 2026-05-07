@@ -338,23 +338,7 @@
       border-radius: 20px;
     }
 
-    /* ===== COMPONENTES ===== */
-    .components-notice {
-      background: linear-gradient(135deg, #fff8e1 0%, #fff3cd 100%);
-      border: 1px solid #f0c04a;
-      border-left: 5px solid var(--usp-gold);
-      border-radius: var(--radius);
-      padding: 20px 24px;
-      margin-bottom: 36px;
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-    }
-    .components-notice .notice-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
-    .components-notice p { font-size: 0.92rem; color: #7a5c00; line-height: 1.65; }
-    .components-notice strong { color: #5a4000; }
-
-    .comp-search {
+    /* ===== DATASHEETS ===== */
       display: flex;
       gap: 12px;
       margin-bottom: 28px;
@@ -415,40 +399,7 @@
     .badge-low { background: #fff3e0; color: #b35a00; }
     .badge-out { background: #fde8e8; color: #b33232; }
 
-    .add-component-btn {
-      margin-top: 20px;
-      background: var(--usp-blue);
-      color: #fff;
-      border: none;
-      padding: 11px 22px;
-      border-radius: 6px;
-      font-size: 0.88rem;
-      font-weight: 700;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: background 0.2s;
-    }
-    .add-component-btn:hover { background: var(--usp-blue-light); }
-
     /* ===== DATASHEETS ===== */
-    .ds-upload-area {
-      border: 2px dashed var(--usp-blue-light);
-      border-radius: var(--radius);
-      padding: 40px;
-      text-align: center;
-      background: #f0f5ff;
-      margin-bottom: 32px;
-      cursor: pointer;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .ds-upload-area:hover { border-color: var(--usp-gold); background: #fffbf0; }
-    .ds-upload-area .upload-icon { font-size: 2.5rem; margin-bottom: 12px; }
-    .ds-upload-area h3 { font-family: 'Merriweather', serif; color: var(--usp-blue); margin-bottom: 8px; font-size: 1.1rem; }
-    .ds-upload-area p { color: var(--text-muted); font-size: 0.9rem; }
-    .ds-upload-area input[type="file"] { display: none; }
-
     .ds-filters {
       display: flex;
       gap: 10px;
@@ -517,36 +468,6 @@
       margin-top: 4px;
     }
     .ds-card a:hover { color: var(--usp-gold); }
-
-    /* ===== CÓDIGO DE ADIÇÃO DE DATASHEETS ===== */
-    .code-tip {
-      background: #1a1a2e;
-      color: #e0e6f0;
-      border-radius: var(--radius);
-      padding: 24px 28px;
-      font-size: 0.84rem;
-      font-family: 'Courier New', monospace;
-      line-height: 1.8;
-      margin-top: 36px;
-      position: relative;
-      overflow: hidden;
-    }
-    .code-tip::before {
-      content: 'COMO ADICIONAR UM DATASHEET';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      background: var(--usp-gold);
-      color: #fff;
-      font-family: 'Source Sans 3', sans-serif;
-      font-weight: 700;
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      padding: 6px 16px;
-    }
-    .code-tip .code-body { margin-top: 24px; }
-    .code-tip .c-comment { color: #6a8caf; }
-    .code-tip .c-key { color: #f0c04a; }
-    .code-tip .c-str { color: #98d982; }
 
     /* ===== CONTATO ===== */
     .contact-grid {
@@ -854,14 +775,14 @@
           acadêmica e supervisão técnica das atividades do laboratório.
         </p>
       </div>
-      <!-- Docente 2 -->
+      <!-- Colaborador -->
       <div class="team-card">
-        <div class="avatar">CS</div>
-        <span class="role">Docente Responsável</span>
+        <div class="avatar" style="background: linear-gradient(135deg, #5a3e99 0%, #7c5cbf 100%); border-color: #9b7ed4;">CS</div>
+        <span class="role" style="background:#f0eaf8; color:#5a3e99;">Colaborador</span>
         <h3>Prof. Dr. Carlos Yujiro Shigue</h3>
         <p>
-          Professor Doutor vinculado à EEL-USP, responsável pela coordenação
-          acadêmica e supervisão científica das atividades do laboratório.
+          Professor Doutor vinculado à EEL-USP, colaborador do laboratório,
+          contribuindo com orientação científica e apoio às atividades de pesquisa e ensino.
         </p>
       </div>
       <!-- Estagiário -->
@@ -887,16 +808,6 @@
       Lista dos componentes eletrônicos disponíveis para uso nas atividades do laboratório.
       O acesso deve ser solicitado ao estagiário responsável.
     </p>
-
-    <div class="components-notice">
-      <span class="notice-icon">⚠️</span>
-      <p>
-        <strong>Inventário em elaboração:</strong> a lista abaixo é um modelo de exemplo.
-        Os dados reais dos componentes devem ser preenchidos diretamente na tabela abaixo no código HTML
-        (seção <code id="comp-section-ref">&lt;!-- COMPONENTES: adicione linhas aqui --&gt;</code>).
-        Veja as instruções ao final desta seção.
-      </p>
-    </div>
 
     <div class="comp-search">
       <input type="text" id="comp-search-input" placeholder="🔍 Pesquisar componente..." oninput="filterComponents()"/>
@@ -987,27 +898,38 @@
       </table>
     </div>
 
-    <button class="add-component-btn" onclick="showCompHelp()">
-      ➕ Como adicionar componentes ao inventário
-    </button>
+    <!--
+    ========================================================================
+    COMO ADICIONAR UM COMPONENTE AO INVENTÁRIO
+    ========================================================================
+    1. Localize o <tbody id="comp-tbody"> abaixo.
+    2. Copie um dos blocos <tr>...</tr> já existentes como modelo.
+    3. Preencha cada <td> com os dados do novo componente:
+       - 1º <td>: número sequencial (ex: 007)
+       - 2º <td>: nome do componente (ex: Resistor 1/8W)
+       - 3º <td>: categoria — deve ser IDÊNTICA ao valor do filtro
+                  (Resistor | Capacitor | Transistor | CI | Diodo |
+                   Indutor | Microcontrolador | Sensor | Outro)
+       - 4º <td>: especificação técnica (ex: 100Ω ±5%)
+       - 5º <td>: quantidade disponível (ex: 200 unidades)
+       - 6º <td>: status de disponibilidade — use UMA das classes:
+                  badge-ok  → verde  → "Disponível"
+                  badge-low → amarelo → "Limitado"
+                  badge-out → vermelho → "Indisponível"
+    4. Também atualize o atributo data-cat da <tr> com a mesma
+       categoria do 3º <td>, para o filtro funcionar corretamente.
 
-    <div id="comp-help" style="display:none; margin-top:20px;">
-      <div class="code-tip">
-        <div class="code-body">
-<span class="c-comment">&lt;!-- Adicione dentro de &lt;tbody id="comp-tbody"&gt; --&gt;</span><br>
-<br>
-&lt;<span class="c-key">tr</span> <span class="c-key">data-cat</span>=<span class="c-str">"Resistor"</span>&gt;<br>
-&nbsp;&nbsp;&lt;<span class="c-key">td</span>&gt;<span class="c-str">007</span>&lt;/<span class="c-key">td</span>&gt; <span class="c-comment">&lt;!-- número sequencial --&gt;</span><br>
-&nbsp;&nbsp;&lt;<span class="c-key">td</span>&gt;<span class="c-str">Resistor 1/8W</span>&lt;/<span class="c-key">td</span>&gt; <span class="c-comment">&lt;!-- nome do componente --&gt;</span><br>
-&nbsp;&nbsp;&lt;<span class="c-key">td</span>&gt;<span class="c-str">Resistor</span>&lt;/<span class="c-key">td</span>&gt; <span class="c-comment">&lt;!-- categoria (deve bater com o filtro) --&gt;</span><br>
-&nbsp;&nbsp;&lt;<span class="c-key">td</span>&gt;<span class="c-str">100Ω ±5%</span>&lt;/<span class="c-key">td</span>&gt; <span class="c-comment">&lt;!-- especificação técnica --&gt;</span><br>
-&nbsp;&nbsp;&lt;<span class="c-key">td</span>&gt;<span class="c-str">200 unidades</span>&lt;/<span class="c-key">td</span>&gt; <span class="c-comment">&lt;!-- quantidade --&gt;</span><br>
-&nbsp;&nbsp;&lt;<span class="c-key">td</span>&gt;&lt;<span class="c-key">span</span> class=<span class="c-str">"status-badge badge-ok"</span>&gt;<span class="c-str">Disponível</span>&lt;/<span class="c-key">span</span>&gt;&lt;/<span class="c-key">td</span>&gt;<br>
-&nbsp;&nbsp;<span class="c-comment">&lt;!-- badge-ok = verde | badge-low = amarelo | badge-out = vermelho --&gt;</span><br>
-&lt;/<span class="c-key">tr</span>&gt;
-        </div>
-      </div>
-    </div>
+    EXEMPLO DE LINHA COMPLETA:
+    <tr data-cat="Resistor">
+      <td>007</td>
+      <td>Resistor 1/8W</td>
+      <td>Resistor</td>
+      <td>100Ω ±5%</td>
+      <td>200 unidades</td>
+      <td><span class="status-badge badge-ok">Disponível</span></td>
+    </tr>
+    ========================================================================
+    -->
   </div>
 </section>
 
@@ -1021,24 +943,45 @@
       Use os filtros abaixo para localizar o documento desejado.
     </p>
 
-    <!-- Área de upload (visual / sem backend) -->
-    <label class="ds-upload-area" for="ds-file-input">
-      <div class="upload-icon">📥</div>
-      <h3>Adicionar Datasheet</h3>
-      <p>Clique aqui ou arraste um arquivo PDF para adicionar ao repositório</p>
-      <p style="margin-top:8px; font-size:0.8rem; color:#9aa;">(Funcionalidade de upload requer backend — veja instruções abaixo)</p>
-      <input type="file" id="ds-file-input" accept=".pdf" onchange="handleDSUpload(event)"/>
-    </label>
+    <!--
+    ========================================================================
+    COMO ADICIONAR UM DATASHEET
+    ========================================================================
+    1. Coloque o arquivo PDF na pasta "datasheets/" (crie-a se não existir),
+       na mesma pasta onde está este arquivo HTML.
+       Exemplo de caminho: datasheets/ne555.pdf
 
-    <div class="ds-filters">
-      <button class="ds-filter-btn active" onclick="filterDS(this, 'all')">Todos</button>
-      <button class="ds-filter-btn" onclick="filterDS(this, 'amp-op')">Amp. Operacionais</button>
-      <button class="ds-filter-btn" onclick="filterDS(this, 'transistor')">Transistores</button>
-      <button class="ds-filter-btn" onclick="filterDS(this, 'ci-digital')">CIs Digitais</button>
-      <button class="ds-filter-btn" onclick="filterDS(this, 'sensor')">Sensores</button>
-      <button class="ds-filter-btn" onclick="filterDS(this, 'mcu')">Microcontroladores</button>
-      <button class="ds-filter-btn" onclick="filterDS(this, 'outro')">Outros</button>
+    2. Dentro de <div id="ds-grid">, copie um dos blocos <div class="ds-card">
+       já existentes e preencha com os dados do novo datasheet:
+
+       - data-cat: categoria do componente para o filtro funcionar.
+         Categorias disponíveis:
+           amp-op     → Amplificadores Operacionais
+           transistor → Transistores / MOSFETs
+           ci-digital → Circuitos Integrados Digitais
+           sensor     → Sensores
+           mcu        → Microcontroladores
+           outro      → Outros componentes
+
+       - <h4>: nome/código do componente (ex: NE555)
+       - <span class="ds-cat">: tipo/família (ex: Timer)
+       - <p class="ds-desc">: breve descrição técnica
+       - href no <a>: caminho relativo até o PDF (ex: datasheets/ne555.pdf)
+
+    EXEMPLO DE BLOCO COMPLETO:
+    <div class="ds-card" data-cat="outro">
+      <div class="ds-card-header">
+        <div class="ds-icon">📄</div>
+        <div>
+          <h4>NE555</h4>
+          <span class="ds-cat">Timer</span>
+        </div>
+      </div>
+      <p class="ds-desc">Timer versátil para circuitos monoestável e astável.</p>
+      <a href="datasheets/ne555.pdf" target="_blank">⬇ Baixar PDF</a>
     </div>
+    ========================================================================
+    -->
 
     <div class="ds-grid" id="ds-grid">
       <!--
@@ -1118,31 +1061,6 @@
       </div>
     </div>
 
-    <!-- Instruções para adicionar datasheets -->
-    <div class="code-tip" style="margin-top:36px;">
-      <div class="code-body">
-<span class="c-comment">&lt;!-- COMO ADICIONAR UM DATASHEET --&gt;</span><br>
-<br>
-<span class="c-comment">1. Coloque o arquivo PDF na pasta datasheets/ (crie se não existir)</span><br>
-<span class="c-comment">   Exemplo: datasheets/ne555.pdf</span><br>
-<br>
-<span class="c-comment">2. Dentro de &lt;div id="ds-grid"&gt;, adicione um bloco:</span><br>
-<br>
-&lt;<span class="c-key">div</span> class=<span class="c-str">"ds-card"</span> data-cat=<span class="c-str">"amp-op"</span>&gt;<br>
-&nbsp;&nbsp;&lt;<span class="c-key">div</span> class=<span class="c-str">"ds-card-header"</span>&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="c-key">div</span> class=<span class="c-str">"ds-icon"</span>&gt;📄&lt;/<span class="c-key">div</span>&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="c-key">div</span>&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="c-key">h4</span>&gt;<span class="c-str">NE555</span>&lt;/<span class="c-key">h4</span>&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="c-key">span</span> class=<span class="c-str">"ds-cat"</span>&gt;<span class="c-str">Timer</span>&lt;/<span class="c-key">span</span>&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="c-key">div</span>&gt;<br>
-&nbsp;&nbsp;&lt;/<span class="c-key">div</span>&gt;<br>
-&nbsp;&nbsp;&lt;<span class="c-key">p</span> class=<span class="c-str">"ds-desc"</span>&gt;<span class="c-str">Timer versátil para monoestável e astável.</span>&lt;/<span class="c-key">p</span>&gt;<br>
-&nbsp;&nbsp;&lt;<span class="c-key">a</span> href=<span class="c-str">"datasheets/ne555.pdf"</span> target=<span class="c-str">"_blank"</span>&gt;⬇ Baixar PDF&lt;/<span class="c-key">a</span>&gt;<br>
-&lt;/<span class="c-key">div</span>&gt;<br>
-<br>
-<span class="c-comment">Categorias disponíveis: amp-op | transistor | ci-digital | sensor | mcu | outro</span>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1275,12 +1193,6 @@
     });
   }
 
-  // ===== AJUDA COMPONENTES =====
-  function showCompHelp() {
-    const el = document.getElementById('comp-help');
-    el.style.display = el.style.display === 'none' ? 'block' : 'none';
-  }
-
   // ===== FILTRO DE DATASHEETS =====
   function filterDS(btn, cat) {
     document.querySelectorAll('.ds-filter-btn').forEach(b => b.classList.remove('active'));
@@ -1288,13 +1200,6 @@
     document.querySelectorAll('#ds-grid .ds-card').forEach(card => {
       card.style.display = (cat === 'all' || card.getAttribute('data-cat') === cat) ? '' : 'none';
     });
-  }
-
-  // ===== UPLOAD DE DATASHEET (visual) =====
-  function handleDSUpload(event) {
-    const file = event.target.files[0];
-    if (!file) return;
-    alert(`Arquivo selecionado: ${file.name}\n\nPara hospedar este PDF no site, coloque-o na pasta "datasheets/" e adicione o bloco correspondente no HTML conforme as instruções abaixo.`);
   }
 
   // ===== STATS DINÂMICAS =====
