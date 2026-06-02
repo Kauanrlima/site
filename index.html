@@ -60,8 +60,15 @@
       background: rgba(255,255,255,0.08); color: var(--usp-gold-light);
       border-bottom-color: var(--usp-gold-light);
     }
+    .admin-nav-btn {
+      color: rgba(255,255,255,0.6); background: transparent; border: none;
+      font-size: 0.85rem; font-weight: 600; padding: 20px 18px; display: block;
+      cursor: pointer; font-family: inherit; transition: all 0.2s; letter-spacing: 0.02em;
+      border-bottom: 3px solid transparent;
+    }
+    .admin-nav-btn:hover { color: var(--usp-gold-light); border-bottom-color: var(--usp-gold-light); }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; margin-left: auto; padding: 8px; }
-    .hamburger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: 0.3s; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; }
 
     .hero {
       background: linear-gradient(135deg, var(--usp-blue) 0%, var(--usp-blue-mid) 60%, #001a40 100%);
@@ -115,58 +122,28 @@
       box-shadow: var(--card-shadow); border-top: 4px solid var(--usp-blue); transition: transform 0.2s;
     }
     .prop-card:hover { transform: translateY(-4px); }
-    .prop-card .icon {
-      width: 48px; height: 48px; background: var(--usp-blue); border-radius: 8px;
-      display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 22px;
-    }
+    .prop-card .icon { width: 48px; height: 48px; background: var(--usp-blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 22px; }
     .prop-card h3 { font-family: 'Merriweather', serif; font-size: 1.1rem; color: var(--usp-blue); margin-bottom: 10px; }
     .prop-card p { color: var(--text-muted); font-size: 0.95rem; }
 
     .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
-    .team-card {
-      background: #fff; border-radius: var(--radius); padding: 32px 28px;
-      box-shadow: var(--card-shadow); text-align: center; transition: transform 0.2s;
-    }
+    .team-card { background: #fff; border-radius: var(--radius); padding: 32px 28px; box-shadow: var(--card-shadow); text-align: center; transition: transform 0.2s; }
     .team-card:hover { transform: translateY(-4px); }
-    .avatar {
-      width: 90px; height: 90px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--usp-blue) 0%, var(--usp-blue-light) 100%);
-      margin: 0 auto 18px; display: flex; align-items: center; justify-content: center;
-      font-family: 'Merriweather', serif; font-size: 1.6rem; color: #fff; font-weight: 700;
-      border: 3px solid var(--usp-gold);
-    }
-    .team-card .role {
-      display: inline-block; background: var(--usp-cream); color: var(--usp-blue);
-      font-size: 0.73rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-      padding: 3px 12px; border-radius: 20px; margin-bottom: 10px;
-    }
+    .avatar { width: 90px; height: 90px; border-radius: 50%; background: linear-gradient(135deg, var(--usp-blue) 0%, var(--usp-blue-light) 100%); margin: 0 auto 18px; display: flex; align-items: center; justify-content: center; font-family: 'Merriweather', serif; font-size: 1.6rem; color: #fff; font-weight: 700; border: 3px solid var(--usp-gold); }
+    .team-card .role { display: inline-block; background: var(--usp-cream); color: var(--usp-blue); font-size: 0.73rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 12px; border-radius: 20px; margin-bottom: 10px; }
     .team-card h3 { font-family: 'Merriweather', serif; font-size: 1rem; color: var(--usp-blue); margin-bottom: 8px; }
     .team-card p { font-size: 0.88rem; color: var(--text-muted); }
     .team-card .intern-badge { background: #e8f4e8; color: #2d7a2d; border-radius: 20px; }
 
-    /* ===== COMPONENTES – busca e controles ===== */
-    .comp-controls {
-      display: flex; gap: 12px; margin-bottom: 28px; flex-wrap: wrap; align-items: center;
-    }
-    .comp-controls input {
-      flex: 1; min-width: 220px; padding: 10px 16px;
-      border: 1.5px solid var(--border); border-radius: 6px;
-      font-size: 0.92rem; font-family: inherit; color: var(--text); outline: none; transition: border-color 0.2s;
-    }
+    .comp-controls { display: flex; gap: 12px; margin-bottom: 28px; flex-wrap: wrap; align-items: center; }
+    .comp-controls input { flex: 1; min-width: 220px; padding: 10px 16px; border: 1.5px solid var(--border); border-radius: 6px; font-size: 0.92rem; font-family: inherit; color: var(--text); outline: none; transition: border-color 0.2s; }
     .comp-controls input:focus { border-color: var(--usp-blue); }
-    .comp-controls select {
-      padding: 10px 14px; border: 1.5px solid var(--border); border-radius: 6px;
-      font-size: 0.92rem; font-family: inherit; color: var(--text); outline: none; background: #fff; cursor: pointer;
-    }
+    .comp-controls select { padding: 10px 14px; border: 1.5px solid var(--border); border-radius: 6px; font-size: 0.92rem; font-family: inherit; color: var(--text); outline: none; background: #fff; cursor: pointer; }
 
-    /* ===== TABELA PAGINADA ===== */
     .components-table-wrap { overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
     thead tr { background: var(--usp-blue); color: #fff; }
-    thead th {
-      padding: 13px 16px; text-align: left; font-weight: 700;
-      font-size: 0.82rem; letter-spacing: 0.05em; text-transform: uppercase;
-    }
+    thead th { padding: 13px 16px; text-align: left; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.05em; text-transform: uppercase; }
     tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
     tbody tr:hover { background: #f0f4fa; }
     tbody td { padding: 12px 16px; color: var(--text-muted); }
@@ -176,91 +153,43 @@
     .badge-low { background: #fff3e0; color: #b35a00; }
     .badge-out { background: #fde8e8; color: #b33232; }
 
-    /* ===== PAGINADOR GENÉRICO ===== */
-    .paginator {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-top: 18px; flex-wrap: wrap; gap: 12px;
-    }
+    .paginator { display: flex; align-items: center; justify-content: space-between; margin-top: 18px; flex-wrap: wrap; gap: 12px; }
     .paginator-info { font-size: 0.84rem; color: var(--text-muted); }
     .paginator-btns { display: flex; gap: 6px; align-items: center; }
-    .pg-btn {
-      width: 36px; height: 36px; border-radius: 6px; border: 1.5px solid var(--border);
-      background: #fff; color: var(--text); font-size: 0.85rem; font-weight: 700;
-      cursor: pointer; display: flex; align-items: center; justify-content: center;
-      transition: all 0.18s;
-    }
+    .pg-btn { width: 36px; height: 36px; border-radius: 6px; border: 1.5px solid var(--border); background: #fff; color: var(--text); font-size: 0.85rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.18s; }
     .pg-btn:hover:not(:disabled) { background: var(--usp-blue); color: #fff; border-color: var(--usp-blue); }
     .pg-btn.active { background: var(--usp-blue); color: #fff; border-color: var(--usp-blue); }
     .pg-btn:disabled { opacity: 0.35; cursor: not-allowed; }
-    .pg-arrow { font-size: 1rem; }
 
-    /* ===== DATASHEETS – filtros ===== */
     .ds-filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
-    .ds-filter-btn {
-      padding: 7px 18px; border-radius: 20px; border: 1.5px solid var(--border);
-      background: #fff; color: var(--text-muted); font-size: 0.84rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
-    }
+    .ds-filter-btn { padding: 7px 18px; border-radius: 20px; border: 1.5px solid var(--border); background: #fff; color: var(--text-muted); font-size: 0.84rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
     .ds-filter-btn.active, .ds-filter-btn:hover { background: var(--usp-blue); color: #fff; border-color: var(--usp-blue); }
 
-    /* ===== DATASHEETS – carrossel ===== */
-    .ds-carousel-wrap { position: relative; }
-    .ds-viewport { overflow: hidden; }
-    .ds-track {
-      display: flex; gap: 20px;
-      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
-    }
-    .ds-card {
-      background: #fff; border-radius: var(--radius); padding: 22px 20px;
-      box-shadow: var(--card-shadow); border: 1px solid var(--border);
-      display: flex; flex-direction: column; gap: 10px;
-      transition: transform 0.2s, box-shadow 0.2s;
-      flex: 0 0 calc(20% - 16px); /* 5 cards per page */
-      min-width: 180px;
-    }
+    .ds-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+    .ds-card { background: #fff; border-radius: var(--radius); padding: 22px 20px; box-shadow: var(--card-shadow); border: 1px solid var(--border); display: flex; flex-direction: column; gap: 10px; transition: transform 0.2s, box-shadow 0.2s; }
     .ds-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,51,102,0.14); }
     .ds-card-header { display: flex; align-items: flex-start; gap: 12px; }
-    .ds-icon {
-      width: 42px; height: 42px; background: #fef0d7; border-radius: 8px;
-      display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;
-    }
+    .ds-icon { width: 42px; height: 42px; background: #fef0d7; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
     .ds-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--text); }
     .ds-card .ds-cat { font-size: 0.73rem; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase; }
     .ds-card .ds-desc { font-size: 0.84rem; color: var(--text-muted); flex: 1; }
-    .ds-card a {
-      display: inline-flex; align-items: center; gap: 6px;
-      color: var(--usp-blue); font-size: 0.85rem; font-weight: 700; text-decoration: none; margin-top: 4px;
-    }
+    .ds-card a { display: inline-flex; align-items: center; gap: 6px; color: var(--usp-blue); font-size: 0.85rem; font-weight: 700; text-decoration: none; margin-top: 4px; }
     .ds-card a:hover { color: var(--usp-gold); }
-    .ds-empty {
-      padding: 40px 20px; text-align: center; color: var(--text-muted);
-      font-size: 0.95rem; background: #fff; border-radius: var(--radius);
-      border: 1.5px dashed var(--border); width: 100%;
-    }
+    .ds-empty { padding: 40px 20px; text-align: center; color: var(--text-muted); font-size: 0.95rem; background: #fff; border-radius: var(--radius); border: 1.5px dashed var(--border); }
 
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
     .contact-info { display: flex; flex-direction: column; gap: 20px; }
     .contact-item { display: flex; gap: 16px; align-items: flex-start; }
-    .contact-item .ci-icon {
-      width: 44px; height: 44px; background: var(--usp-blue); border-radius: 8px;
-      display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; color: #fff;
-    }
+    .contact-item .ci-icon { width: 44px; height: 44px; background: var(--usp-blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; color: #fff; }
     .contact-item h4 { font-size: 0.88rem; font-weight: 700; color: var(--usp-blue); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
     .contact-item p { font-size: 0.92rem; color: var(--text-muted); }
-    .map-placeholder {
-      background: linear-gradient(135deg, var(--usp-blue) 0%, #001a40 100%);
-      border-radius: var(--radius); height: 280px;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      color: #fff; gap: 12px; font-size: 2rem;
-    }
+    .map-placeholder { background: linear-gradient(135deg, var(--usp-blue) 0%, #001a40 100%); border-radius: var(--radius); height: 280px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; gap: 12px; font-size: 2rem; }
     .map-placeholder p { font-size: 0.85rem; opacity: 0.75; }
     .map-placeholder a { color: var(--usp-gold-light); font-size: 0.85rem; font-weight: 700; text-decoration: none; }
 
     footer { background: var(--usp-blue); color: rgba(255,255,255,0.72); padding: 48px 32px 24px; }
     .footer-inner { max-width: 1060px; margin: 0 auto; }
-    .footer-top {
-      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px;
-      padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.12); margin-bottom: 24px;
-    }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.12); margin-bottom: 24px; }
     .footer-brand .lab-name-f { font-family: 'Merriweather', serif; font-size: 1rem; color: #fff; font-weight: 700; margin-bottom: 6px; }
     .footer-brand p { font-size: 0.85rem; line-height: 1.7; }
     .footer-col h4 { color: var(--usp-gold-light); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; }
@@ -270,15 +199,153 @@
     .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.8rem; }
     .footer-bottom a { color: var(--usp-gold-light); text-decoration: none; }
 
-    .scroll-top {
-      position: fixed; bottom: 28px; right: 28px; width: 44px; height: 44px;
-      background: var(--usp-blue); color: #fff; border: 2px solid var(--usp-gold);
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      cursor: pointer; font-size: 18px; opacity: 0; transition: opacity 0.3s, transform 0.2s;
-      z-index: 200; text-decoration: none;
-    }
+    .scroll-top { position: fixed; bottom: 28px; right: 28px; width: 44px; height: 44px; background: var(--usp-blue); color: #fff; border: 2px solid var(--usp-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 18px; opacity: 0; transition: opacity 0.3s, transform 0.2s; z-index: 200; text-decoration: none; }
     .scroll-top.visible { opacity: 1; }
     .scroll-top:hover { transform: translateY(-3px); }
+
+    /* ===================== ADMIN PANEL ===================== */
+    .admin-fab {
+      position: fixed; bottom: 80px; right: 28px;
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--usp-blue); color: #fff;
+      border: 2px solid var(--usp-gold);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 20px; z-index: 199;
+      box-shadow: 0 4px 16px rgba(0,51,102,0.3);
+      transition: transform 0.2s, background 0.2s;
+      title: 'Painel Admin';
+    }
+    .admin-fab:hover { transform: scale(1.1); background: var(--usp-blue-mid); }
+
+    /* OVERLAY */
+    .admin-overlay {
+      display: none; position: fixed; inset: 0; z-index: 1000;
+      background: rgba(0,20,50,0.65); backdrop-filter: blur(4px);
+      align-items: flex-start; justify-content: center;
+      padding: 24px 16px; overflow-y: auto;
+    }
+    .admin-overlay.open { display: flex; }
+
+    /* MODAL */
+    .admin-modal {
+      background: #fff; border-radius: 16px; width: 100%; max-width: 860px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.3);
+      animation: modalSlideIn 0.3s cubic-bezier(0.34,1.56,0.64,1);
+      overflow: hidden;
+    }
+    @keyframes modalSlideIn {
+      from { opacity:0; transform: translateY(-30px) scale(0.97); }
+      to   { opacity:1; transform: translateY(0) scale(1); }
+    }
+
+    /* LOGIN */
+    .admin-login {
+      padding: 48px 40px; text-align: center;
+    }
+    .admin-login h2 { font-family: 'Merriweather', serif; color: var(--usp-blue); margin-bottom: 8px; }
+    .admin-login p { color: var(--text-muted); margin-bottom: 28px; font-size: 0.92rem; }
+    .admin-login input {
+      width: 100%; max-width: 320px; padding: 11px 16px;
+      border: 2px solid var(--border); border-radius: 8px;
+      font-size: 1rem; font-family: inherit; outline: none;
+      transition: border-color 0.2s; margin-bottom: 14px; display: block; margin-left: auto; margin-right: auto;
+    }
+    .admin-login input:focus { border-color: var(--usp-blue); }
+    .admin-login .login-err { color: #c0392b; font-size: 0.85rem; margin-bottom: 10px; min-height: 20px; }
+    .btn-blue { background: var(--usp-blue); color: #fff; border-color: var(--usp-blue); font-family: inherit; }
+    .btn-blue:hover { background: var(--usp-blue-mid); }
+    .btn-sm { padding: 7px 16px; font-size: 0.83rem; border-radius: 6px; }
+    .btn-danger { background: #c0392b; color: #fff; border: none; border-radius: 6px; padding: 6px 12px; font-size: 0.82rem; cursor: pointer; font-family: inherit; font-weight: 600; transition: background 0.2s; }
+    .btn-danger:hover { background: #a93226; }
+    .btn-edit { background: var(--usp-blue); color: #fff; border: none; border-radius: 6px; padding: 6px 12px; font-size: 0.82rem; cursor: pointer; font-family: inherit; font-weight: 600; transition: background 0.2s; }
+    .btn-edit:hover { background: var(--usp-blue-mid); }
+
+    /* MODAL HEADER */
+    .admin-header {
+      background: var(--usp-blue); color: #fff;
+      padding: 20px 28px; display: flex; align-items: center; gap: 16px;
+    }
+    .admin-header h2 { font-family: 'Merriweather', serif; font-size: 1.1rem; flex: 1; }
+    .admin-close {
+      background: rgba(255,255,255,0.15); border: none; color: #fff;
+      width: 34px; height: 34px; border-radius: 50%; cursor: pointer;
+      font-size: 18px; display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s; flex-shrink: 0;
+    }
+    .admin-close:hover { background: rgba(255,255,255,0.3); }
+
+    /* TABS */
+    .admin-tabs { display: flex; border-bottom: 2px solid var(--border); background: #f7f8fa; }
+    .admin-tab {
+      padding: 14px 24px; font-size: 0.9rem; font-weight: 700; cursor: pointer;
+      border: none; background: none; font-family: inherit; color: var(--text-muted);
+      border-bottom: 3px solid transparent; margin-bottom: -2px; transition: color 0.2s;
+    }
+    .admin-tab.active { color: var(--usp-blue); border-bottom-color: var(--usp-blue); background: #fff; }
+    .admin-tab-panel { display: none; padding: 28px; }
+    .admin-tab-panel.active { display: block; }
+
+    /* FORM FIELDS */
+    .field-group { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+    .field-group.full { grid-template-columns: 1fr; }
+    .field-group.three { grid-template-columns: 1fr 1fr 1fr; }
+    .field label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--usp-blue); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .field input, .field select, .field textarea {
+      width: 100%; padding: 9px 12px;
+      border: 1.5px solid var(--border); border-radius: 7px;
+      font-size: 0.9rem; font-family: inherit; color: var(--text); outline: none;
+      transition: border-color 0.2s; background: #fff;
+    }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--usp-blue); }
+
+    /* UPLOAD ZONE */
+    .upload-zone {
+      display: block;
+      border: 2px dashed var(--border); border-radius: 10px;
+      padding: 28px; text-align: center; cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      background: #fafbfc;
+      user-select: none;
+    }
+    .upload-zone:hover, .upload-zone.drag-over { border-color: var(--usp-blue); background: #f0f4fa; }
+    .upload-zone .uz-icon { font-size: 2rem; margin-bottom: 8px; }
+    .upload-zone p { color: var(--text-muted); font-size: 0.88rem; }
+    .upload-zone strong { color: var(--usp-blue); }
+    .upload-preview { margin-top: 10px; padding: 10px 14px; background: #e8f4e8; border-radius: 7px; font-size: 0.85rem; color: #276627; display: none; align-items: center; gap: 8px; }
+    .upload-preview.show { display: flex; }
+
+    /* ADMIN TABLE */
+    .admin-table-wrap { overflow-x: auto; margin-bottom: 20px; border: 1px solid var(--border); border-radius: 8px; }
+    .admin-table { width: 100%; border-collapse: collapse; font-size: 0.87rem; }
+    .admin-table thead tr { background: var(--usp-blue); color: #fff; }
+    .admin-table thead th { padding: 10px 12px; text-align: left; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+    .admin-table tbody tr { border-bottom: 1px solid var(--border); }
+    .admin-table tbody tr:last-child { border-bottom: none; }
+    .admin-table tbody td { padding: 10px 12px; color: var(--text-muted); vertical-align: middle; }
+    .admin-table tbody td:first-child { color: var(--text); font-weight: 600; }
+    .admin-table .action-cell { display: flex; gap: 6px; }
+    .admin-empty { text-align: center; padding: 32px; color: var(--text-muted); font-size: 0.9rem; }
+
+    /* FORM ACTIONS */
+    .form-actions { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+    .form-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; }
+    .section-divider { border: none; border-top: 1.5px solid var(--border); margin: 24px 0; }
+
+    /* TOAST */
+    .toast {
+      position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(20px);
+      background: #1a1a2e; color: #fff; padding: 12px 24px; border-radius: 8px;
+      font-size: 0.9rem; font-weight: 600; z-index: 2000;
+      opacity: 0; transition: all 0.3s; pointer-events: none;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.3);
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .toast.success { border-left: 4px solid #4caf50; }
+    .toast.error   { border-left: 4px solid #e53935; }
+
+    /* INLINE EDIT ROW */
+    .edit-row td { background: #f0f4fa !important; }
+    .edit-row input, .edit-row select { padding: 5px 8px; border: 1.5px solid var(--usp-blue); border-radius: 5px; font-size: 0.85rem; width: 100%; font-family: inherit; }
 
     @media (max-width: 768px) {
       header { padding: 0 16px; }
@@ -291,12 +358,9 @@
       .proposito-grid, .contact-grid { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; }
       .stats-bar { gap: 28px; padding: 18px 16px; }
-      .ds-card { flex: 0 0 calc(50% - 10px); }
+      .field-group, .field-group.three { grid-template-columns: 1fr; }
+      .admin-tab-panel { padding: 18px; }
     }
-    @media (max-width: 480px) {
-      .ds-card { flex: 0 0 calc(100% - 0px); }
-    }
-
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -331,15 +395,14 @@
       <span class="inst-name">EEL-USP · Campus 2 · Área II</span>
     </div>
   </a>
-  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
   <nav id="main-nav">
     <a href="#proposito" onclick="closeMenu()">Propósito</a>
     <a href="#equipe" onclick="closeMenu()">Equipe</a>
     <a href="#componentes" onclick="closeMenu()">Componentes</a>
     <a href="#datasheets" onclick="closeMenu()">Datasheets</a>
     <a href="#contato" onclick="closeMenu()">Contato</a>
+    <button class="admin-nav-btn" onclick="openAdmin()" title="Painel Administrativo">🔒 Admin</button>
   </nav>
 </header>
 
@@ -367,11 +430,7 @@
   <div class="hero-inner">
     <div class="hero-badge">⚡ Laboratório de Eletrônica</div>
     <h1>Explorando circuitos,<br><span>formando engenheiros.</span></h1>
-    <p>
-      Espaço dedicado ao ensino prático de eletrônica analógica e digital,
-      prototipagem e desenvolvimento de projetos de engenharia no Campus 2 da
-      Escola de Engenharia de Lorena – USP.
-    </p>
+    <p>Espaço dedicado ao ensino prático de eletrônica analógica e digital, prototipagem e desenvolvimento de projetos de engenharia no Campus 2 da Escola de Engenharia de Lorena – USP.</p>
     <div class="hero-ctas">
       <a href="#componentes" class="btn btn-gold">📦 Ver Componentes</a>
       <a href="#datasheets" class="btn btn-outline">📄 Acessar Datasheets</a>
@@ -381,68 +440,33 @@
 
 <!-- STATS BAR -->
 <div class="stats-bar">
-  <div class="stat-item">
-    <span class="num">2</span>
-    <span class="lbl">Docentes Responsáveis</span>
-  </div>
-  <div class="stat-item">
-    <span class="num" id="stat-comp">—</span>
-    <span class="lbl">Tipos de Componentes</span>
-  </div>
-  <div class="stat-item">
-    <span class="num" id="stat-ds">—</span>
-    <span class="lbl">Datasheets Disponíveis</span>
-  </div>
-  <div class="stat-item">
-    <span class="num">USP</span>
-    <span class="lbl">Lorena · Campus 2</span>
-  </div>
+  <div class="stat-item"><span class="num">2</span><span class="lbl">Docentes Responsáveis</span></div>
+  <div class="stat-item"><span class="num" id="stat-comp">—</span><span class="lbl">Tipos de Componentes</span></div>
+  <div class="stat-item"><span class="num" id="stat-ds">—</span><span class="lbl">Datasheets Disponíveis</span></div>
+  <div class="stat-item"><span class="num">USP</span><span class="lbl">Lorena · Campus 2</span></div>
 </div>
 
-<!-- ===== PROPÓSITO ===== -->
+<!-- PROPÓSITO -->
 <section id="proposito">
   <div class="section-inner">
     <p class="section-label">Nossa missão</p>
     <h2 class="section-title">Propósito do Laboratório</h2>
-    <p class="section-lead">
-      O Laboratório de Eletrônica da EEL-USP (Campus 2) apoia as atividades de ensino,
-      pesquisa e extensão nas áreas de eletrônica analógica, digital e de potência,
-      fornecendo infraestrutura, componentes e orientação técnica para alunos de graduação.
-    </p>
+    <p class="section-lead">O Laboratório de Eletrônica da EEL-USP (Campus 2) apoia as atividades de ensino, pesquisa e extensão nas áreas de eletrônica analógica, digital e de potência, fornecendo infraestrutura, componentes e orientação técnica para alunos de graduação.</p>
     <div class="proposito-grid">
-      <div class="prop-card">
-        <div class="icon">🎓</div>
-        <h3>Apoio Didático</h3>
-        <p>Suporte prático às disciplinas de eletrônica dos cursos de engenharia, com bancadas equipadas e componentes disponíveis para experimentos supervisionados.</p>
-      </div>
-      <div class="prop-card">
-        <div class="icon">🔬</div>
-        <h3>Pesquisa e Inovação</h3>
-        <p>Ambiente propício ao desenvolvimento de projetos de iniciação científica e trabalhos de conclusão de curso nas áreas de eletrônica e sistemas embarcados.</p>
-      </div>
-      <div class="prop-card">
-        <div class="icon">🛠️</div>
-        <h3>Prototipagem</h3>
-        <p>Espaço maker para prototipagem de circuitos, confecção de PCBs e testes de projetos eletrônicos em ambiente seguro e orientado.</p>
-      </div>
-      <div class="prop-card">
-        <div class="icon">📚</div>
-        <h3>Formação Técnica</h3>
-        <p>Desenvolvimento de competências práticas em instrumentação eletrônica, uso de osciloscópios, multímetros, fontes de tensão e geradores de sinal.</p>
-      </div>
+      <div class="prop-card"><div class="icon">🎓</div><h3>Apoio Didático</h3><p>Suporte prático às disciplinas de eletrônica dos cursos de engenharia, com bancadas equipadas e componentes disponíveis para experimentos supervisionados.</p></div>
+      <div class="prop-card"><div class="icon">🔬</div><h3>Pesquisa e Inovação</h3><p>Ambiente propício ao desenvolvimento de projetos de iniciação científica e trabalhos de conclusão de curso nas áreas de eletrônica e sistemas embarcados.</p></div>
+      <div class="prop-card"><div class="icon">🛠️</div><h3>Prototipagem</h3><p>Espaço maker para prototipagem de circuitos, confecção de PCBs e testes de projetos eletrônicos em ambiente seguro e orientado.</p></div>
+      <div class="prop-card"><div class="icon">📚</div><h3>Formação Técnica</h3><p>Desenvolvimento de competências práticas em instrumentação eletrônica, uso de osciloscópios, multímetros, fontes de tensão e geradores de sinal.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ===== EQUIPE ===== -->
+<!-- EQUIPE -->
 <section id="equipe">
   <div class="section-inner">
     <p class="section-label">Pessoas</p>
     <h2 class="section-title">Equipe do Laboratório</h2>
-    <p class="section-lead">
-      Conheça os docentes responsáveis e o estagiário que garantem o funcionamento e
-      a qualidade das atividades desenvolvidas no laboratório.
-    </p>
+    <p class="section-lead">Conheça os docentes responsáveis e o estagiário que garantem o funcionamento e a qualidade das atividades desenvolvidas no laboratório.</p>
     <div class="team-grid">
       <div class="team-card">
         <div class="avatar">AB</div>
@@ -451,13 +475,13 @@
         <p>Professor Doutor vinculado à EEL-USP, responsável pela coordenação acadêmica e supervisão técnica das atividades do laboratório.</p>
       </div>
       <div class="team-card">
-        <div class="avatar" style="background: linear-gradient(135deg, #5a3e99 0%, #7c5cbf 100%); border-color: #9b7ed4;">CS</div>
-        <span class="role" style="background:#f0eaf8; color:#5a3e99;">Colaborador</span>
+        <div class="avatar" style="background: linear-gradient(135deg,#5a3e99 0%,#7c5cbf 100%); border-color:#9b7ed4;">CS</div>
+        <span class="role" style="background:#f0eaf8;color:#5a3e99;">Colaborador</span>
         <h3>Prof. Dr. Carlos Yujiro Shigue</h3>
         <p>Professor Doutor vinculado à EEL-USP, colaborador do laboratório, contribuindo com orientação científica e apoio às atividades de pesquisa e ensino.</p>
       </div>
       <div class="team-card">
-        <div class="avatar" style="background: linear-gradient(135deg, #2d7a2d 0%, #4caf50 100%); border-color: #4caf50;">KL</div>
+        <div class="avatar" style="background: linear-gradient(135deg,#2d7a2d 0%,#4caf50 100%); border-color:#4caf50;">KL</div>
         <span class="role intern-badge">Estagiário</span>
         <h3>Kauan Ramos Lima</h3>
         <p>Aluno de graduação da EEL-USP, estagiário responsável pelo suporte operacional, organização de componentes e atendimento aos usuários do laboratório.</p>
@@ -466,25 +490,14 @@
   </div>
 </section>
 
-<!-- ===== COMPONENTES ===== -->
+<!-- COMPONENTES -->
 <section id="componentes">
   <div class="section-inner">
     <p class="section-label">Inventário</p>
     <h2 class="section-title">Componentes Disponíveis</h2>
-    <p class="section-lead">
-      Lista dos componentes eletrônicos disponíveis para uso nas atividades do laboratório.
-      O acesso deve ser solicitado ao estagiário responsável.
-    </p>
-
-    <!-- Controles: busca por NOME e filtro por categoria -->
+    <p class="section-lead">Lista dos componentes eletrônicos disponíveis para uso nas atividades do laboratório. O acesso deve ser solicitado ao estagiário responsável.</p>
     <div class="comp-controls">
-      <input
-        type="text"
-        id="comp-search-input"
-        placeholder="🔍 Pesquisar por nome do componente"
-        oninput="compSearch()"
-        aria-label="Pesquisar componentes"
-      />
+      <input type="text" id="comp-search-input" placeholder="🔍 Pesquisar por nome do componente" oninput="compSearch()" aria-label="Pesquisar componentes"/>
       <select id="comp-cat-filter" onchange="compSearch()">
         <option value="">Todas as categorias</option>
         <option value="Resistor">Resistores</option>
@@ -498,73 +511,12 @@
         <option value="Outro">Outros</option>
       </select>
     </div>
-
     <div class="components-table-wrap">
       <table>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Componente</th>
-            <th>Categoria</th>
-            <th>Especificação</th>
-            <th>Quantidade</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="comp-tbody">
-          <!--
-          ================================================================
-          COMO ADICIONAR UM COMPONENTE AO INVENTÁRIO
-          ================================================================
-          Copie e cole um bloco <tr> abaixo e preencha os campos:
-            data-cat  → categoria (Resistor | Capacitor | Transistor |
-                         CI | Diodo | Indutor | Microcontrolador |
-                         Sensor | Outro)
-            data-nome → nome do componente em minúsculo (para busca)
-            1º <td>   → número sequencial (ex: 007)
-            2º <td>   → nome do componente (ex: Resistor 1/8W)
-            3º <td>   → categoria (igual ao data-cat)
-            4º <td>   → especificação técnica
-            5º <td>   → quantidade
-            6º <td>   → status: badge-ok | badge-low | badge-out
-          ================================================================
-          -->
-          <tr data-cat="Resistor" data-nome="resistor 1/4w">
-            <td>001</td><td>Resistor 1/4W</td><td>Resistor</td>
-            <td>Sortimento: 10Ω – 1MΩ</td><td>A definir</td>
-            <td><span class="status-badge badge-ok">Disponível</span></td>
-          </tr>
-          <tr data-cat="Capacitor" data-nome="capacitor eletrolítico">
-            <td>002</td><td>Capacitor Eletrolítico</td><td>Capacitor</td>
-            <td>10µF – 1000µF / 25V–50V</td><td>A definir</td>
-            <td><span class="status-badge badge-ok">Disponível</span></td>
-          </tr>
-          <tr data-cat="Transistor" data-nome="bc548 bc558">
-            <td>003</td><td>BC548 / BC558</td><td>Transistor</td>
-            <td>NPN / PNP BJT</td><td>A definir</td>
-            <td><span class="status-badge badge-ok">Disponível</span></td>
-          </tr>
-          <tr data-cat="CI" data-nome="lm741">
-            <td>004</td><td>LM741</td><td>CI</td>
-            <td>Amplificador Operacional</td><td>A definir</td>
-            <td><span class="status-badge badge-ok">Disponível</span></td>
-          </tr>
-          <tr data-cat="Diodo" data-nome="1n4007">
-            <td>005</td><td>1N4007</td><td>Diodo</td>
-            <td>Retificador 1A / 1000V</td><td>A definir</td>
-            <td><span class="status-badge badge-ok">Disponível</span></td>
-          </tr>
-          <tr data-cat="Microcontrolador" data-nome="arduino uno">
-            <td>006</td><td>Arduino Uno</td><td>Microcontrolador</td>
-            <td>ATmega328P / 5V</td><td>A definir</td>
-            <td><span class="status-badge badge-low">Limitado</span></td>
-          </tr>
-          <!-- Adicione mais linhas aqui seguindo o modelo acima -->
-        </tbody>
+        <thead><tr><th>#</th><th>Componente</th><th>Categoria</th><th>Especificação</th><th>Quantidade</th><th>Status</th></tr></thead>
+        <tbody id="comp-tbody"></tbody>
       </table>
     </div>
-
-    <!-- Paginador de componentes -->
     <div class="paginator" id="comp-paginator">
       <span class="paginator-info" id="comp-pag-info"></span>
       <div class="paginator-btns" id="comp-pag-btns"></div>
@@ -572,17 +524,12 @@
   </div>
 </section>
 
-<!-- ===== DATASHEETS ===== -->
+<!-- DATASHEETS -->
 <section id="datasheets">
   <div class="section-inner">
     <p class="section-label">Documentação Técnica</p>
     <h2 class="section-title">Datasheets & Manuais</h2>
-    <p class="section-lead">
-      Repositório de datasheets em PDF dos componentes disponíveis no laboratório.
-      Use os filtros abaixo para localizar o documento desejado.
-    </p>
-
-    <!-- Filtros -->
+    <p class="section-lead">Repositório de datasheets em PDF dos componentes disponíveis no laboratório. Use os filtros abaixo para localizar o documento desejado.</p>
     <div class="ds-filters">
       <button class="ds-filter-btn active" onclick="dsFilter(this,'all')">Todos</button>
       <button class="ds-filter-btn" onclick="dsFilter(this,'amp-op')">Amp. Operacionais</button>
@@ -592,73 +539,7 @@
       <button class="ds-filter-btn" onclick="dsFilter(this,'mcu')">Microcontroladores</button>
       <button class="ds-filter-btn" onclick="dsFilter(this,'outro')">Outros</button>
     </div>
-
-    <!-- Carrossel -->
-    <div class="ds-carousel-wrap">
-      <div class="ds-viewport">
-        <div class="ds-track" id="ds-track">
-          <!--
-          ================================================================
-          COMO ADICIONAR UM DATASHEET
-          ================================================================
-          Coloque o PDF em datasheets/<nome>.pdf e copie um bloco abaixo.
-          data-cat: amp-op | transistor | ci-digital | sensor | mcu | outro
-          ================================================================
-          -->
-          <div class="ds-card" data-cat="amp-op">
-            <div class="ds-card-header">
-              <div class="ds-icon">📄</div>
-              <div><h4>LM741</h4><span class="ds-cat">Amplificador Operacional</span></div>
-            </div>
-            <p class="ds-desc">Amplificador operacional clássico, uso geral.</p>
-            <a href="datasheets/lm741.pdf" target="_blank">⬇ Baixar PDF</a>
-          </div>
-          <div class="ds-card" data-cat="transistor">
-            <div class="ds-card-header">
-              <div class="ds-icon">📄</div>
-              <div><h4>BC548</h4><span class="ds-cat">Transistor NPN</span></div>
-            </div>
-            <p class="ds-desc">Transistor BJT NPN de uso geral, baixa potência.</p>
-            <a href="datasheets/bc548.pdf" target="_blank">⬇ Baixar PDF</a>
-          </div>
-          <div class="ds-card" data-cat="transistor">
-            <div class="ds-card-header">
-              <div class="ds-icon">📄</div>
-              <div><h4>IRF540N</h4><span class="ds-cat">MOSFET N-Channel</span></div>
-            </div>
-            <p class="ds-desc">MOSFET canal N para aplicações de potência, 100V/28A.</p>
-            <a href="datasheets/irf540n.pdf" target="_blank">⬇ Baixar PDF</a>
-          </div>
-          <div class="ds-card" data-cat="ci-digital">
-            <div class="ds-card-header">
-              <div class="ds-icon">📄</div>
-              <div><h4>74HC00</h4><span class="ds-cat">CI Digital – Porta NAND</span></div>
-            </div>
-            <p class="ds-desc">Quádruplo porta NAND de 2 entradas, família CMOS 74HC.</p>
-            <a href="datasheets/74hc00.pdf" target="_blank">⬇ Baixar PDF</a>
-          </div>
-          <div class="ds-card" data-cat="mcu">
-            <div class="ds-card-header">
-              <div class="ds-icon">📄</div>
-              <div><h4>ATmega328P</h4><span class="ds-cat">Microcontrolador</span></div>
-            </div>
-            <p class="ds-desc">Microcontrolador AVR de 8 bits, base do Arduino Uno.</p>
-            <a href="datasheets/atmega328p.pdf" target="_blank">⬇ Baixar PDF</a>
-          </div>
-          <div class="ds-card" data-cat="sensor">
-            <div class="ds-card-header">
-              <div class="ds-icon">📄</div>
-              <div><h4>DHT22</h4><span class="ds-cat">Sensor Temperatura/Umidade</span></div>
-            </div>
-            <p class="ds-desc">Sensor digital de temperatura e umidade relativa do ar.</p>
-            <a href="datasheets/dht22.pdf" target="_blank">⬇ Baixar PDF</a>
-          </div>
-          <!-- Adicione mais ds-card aqui -->
-        </div>
-      </div>
-    </div>
-
-    <!-- Paginador de datasheets -->
+    <div class="ds-grid" id="ds-grid"></div>
     <div class="paginator" id="ds-paginator" style="margin-top:18px;">
       <span class="paginator-info" id="ds-pag-info"></span>
       <div class="paginator-btns" id="ds-pag-btns"></div>
@@ -666,59 +547,24 @@
   </div>
 </section>
 
-<!-- ===== CONTATO ===== -->
+<!-- CONTATO -->
 <section id="contato">
   <div class="section-inner">
     <p class="section-label">Localização & Contato</p>
     <h2 class="section-title">Encontre o Laboratório</h2>
-    <p class="section-lead">
-      O laboratório está localizado no Campus 2 (Área II) da EEL-USP, em Lorena-SP.
-      Entre em contato com os responsáveis para agendar visitas ou solicitar acesso.
-    </p>
+    <p class="section-lead">O laboratório está localizado no Campus 2 (Área II) da EEL-USP, em Lorena-SP. Entre em contato com os responsáveis para agendar visitas ou solicitar acesso.</p>
     <div class="contact-grid">
       <div class="contact-info">
-        <div class="contact-item">
-          <div class="ci-icon">📍</div>
-          <div>
-            <h4>Endereço</h4>
-            <p>Estrada Municipal do Campinho, nº 100<br>Campus 2 (Área II) – Lorena, SP<br>CEP 12602-810</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="ci-icon">🏛️</div>
-          <div>
-            <h4>Instituição</h4>
-            <p>Escola de Engenharia de Lorena<br>Universidade de São Paulo (USP)</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="ci-icon">📧</div>
-          <div>
-            <h4>E-mail da Unidade</h4>
-            <p><a href="mailto:imprensa@eel.usp.br" style="color:var(--usp-blue)">imprensa@eel.usp.br</a><br>
-            <small style="color:var(--text-muted)">(Substitua pelo e-mail do laboratório quando disponível)</small></p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="ci-icon">🕐</div>
-          <div>
-            <h4>Horário de Funcionamento</h4>
-            <p>A definir pelos docentes responsáveis<br>
-            <small style="color:var(--text-muted)">(Atualize este campo conforme necessário)</small></p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="ci-icon">🌐</div>
-          <div>
-            <h4>Site Oficial da EEL</h4>
-            <p><a href="https://www.eel.usp.br" target="_blank" style="color:var(--usp-blue)">www.eel.usp.br</a></p>
-          </div>
-        </div>
+        <div class="contact-item"><div class="ci-icon">📍</div><div><h4>Endereço</h4><p>Estrada Municipal do Campinho, nº 100<br>Campus 2 (Área II) – Lorena, SP<br>CEP 12602-810</p></div></div>
+        <div class="contact-item"><div class="ci-icon">🏛️</div><div><h4>Instituição</h4><p>Escola de Engenharia de Lorena<br>Universidade de São Paulo (USP)</p></div></div>
+        <div class="contact-item"><div class="ci-icon">📧</div><div><h4>E-mail da Unidade</h4><p><a href="mailto:imprensa@eel.usp.br" style="color:var(--usp-blue)">imprensa@eel.usp.br</a><br><small style="color:var(--text-muted)">(Substitua pelo e-mail do laboratório quando disponível)</small></p></div></div>
+        <div class="contact-item"><div class="ci-icon">🕐</div><div><h4>Horário de Funcionamento</h4><p>A definir pelos docentes responsáveis<br><small style="color:var(--text-muted)">(Atualize este campo conforme necessário)</small></p></div></div>
+        <div class="contact-item"><div class="ci-icon">🌐</div><div><h4>Site Oficial da EEL</h4><p><a href="https://www.eel.usp.br" target="_blank" style="color:var(--usp-blue)">www.eel.usp.br</a></p></div></div>
       </div>
       <div>
         <div class="map-placeholder">
           <span>🗺️</span>
-          <strong style="font-family:'Merriweather',serif; font-size:1rem;">EEL-USP · Campus 2</strong>
+          <strong style="font-family:'Merriweather',serif;font-size:1rem;">EEL-USP · Campus 2</strong>
           <p>Lorena, SP – Vale do Paraíba</p>
           <a href="https://maps.google.com/?q=EEL+USP+Lorena+Campus+2" target="_blank">Ver no Google Maps →</a>
         </div>
@@ -765,209 +611,810 @@
 
 <a href="#top" class="scroll-top" id="scroll-top-btn" title="Voltar ao topo">↑</a>
 
+<!-- ADMIN FAB -->
+<button class="admin-fab" onclick="openAdmin()" title="Painel Administrativo">🔒</button>
+
+<!-- ===================== ADMIN OVERLAY ===================== -->
+<div class="admin-overlay" id="admin-overlay" onclick="overlayClick(event)">
+  <div class="admin-modal" id="admin-modal">
+
+    <!-- LOGIN -->
+    <div id="admin-login-panel" class="admin-login">
+      <div style="font-size:2.5rem;margin-bottom:12px;">🔐</div>
+      <h2>Painel Administrativo</h2>
+      <p>Digite a senha para acessar o gerenciamento do laboratório.</p>
+      <div class="login-err" id="login-err"></div>
+      <input type="password" id="admin-password-input" placeholder="Senha de acesso" onkeydown="if(event.key==='Enter')doLogin()"/>
+      <div style="margin-top:14px;">
+        <button class="btn btn-blue btn-sm" onclick="doLogin()" style="padding:11px 32px;font-size:0.95rem;">Entrar</button>
+      </div>
+      <p style="margin-top:20px;font-size:0.78rem;color:var(--text-muted);">Senha padrão: <code>eel2025</code> — altere em Configurações após o primeiro acesso.</p>
+      <button onclick="closeAdmin()" style="margin-top:16px;background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:0.85rem;">Cancelar</button>
+    </div>
+
+    <!-- PAINEL LOGADO -->
+    <div id="admin-panel" style="display:none;">
+      <div class="admin-header">
+        <span>⚙️</span>
+        <h2>Painel Administrativo – Lab. Eletrônica EEL-USP</h2>
+        <button class="admin-close" onclick="closeAdmin()">✕</button>
+      </div>
+
+      <div class="admin-tabs">
+        <button class="admin-tab active" onclick="switchTab('tab-comp')">📦 Componentes</button>
+        <button class="admin-tab" onclick="switchTab('tab-ds')">📄 Datasheets</button>
+        <button class="admin-tab" onclick="switchTab('tab-cfg')">⚙️ Configurações</button>
+      </div>
+
+      <!-- TAB: COMPONENTES -->
+      <div class="admin-tab-panel active" id="tab-comp">
+        <h3 style="font-family:'Merriweather',serif;color:var(--usp-blue);margin-bottom:4px;">Gerenciar Componentes</h3>
+        <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:20px;">Adicione, edite ou remova componentes do inventário. As alterações são salvas automaticamente.</p>
+
+        <!-- Formulário para novo componente -->
+        <div style="background:#f7f8fa;border-radius:10px;padding:20px;margin-bottom:24px;border:1px solid var(--border);">
+          <h4 style="color:var(--usp-blue);margin-bottom:14px;font-size:0.95rem;">➕ Adicionar Novo Componente</h4>
+          <div class="field-group">
+            <div class="field"><label>Nome do Componente *</label><input type="text" id="nc-nome" placeholder="ex: Resistor 1/4W"/></div>
+            <div class="field"><label>Categoria *</label>
+              <select id="nc-cat">
+                <option value="">Selecione...</option>
+                <option value="Resistor">Resistor</option>
+                <option value="Capacitor">Capacitor</option>
+                <option value="Transistor">Transistor</option>
+                <option value="CI">Circuito Integrado</option>
+                <option value="Diodo">Diodo</option>
+                <option value="Indutor">Indutor</option>
+                <option value="Microcontrolador">Microcontrolador</option>
+                <option value="Sensor">Sensor</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-group">
+            <div class="field"><label>Especificação Técnica</label><input type="text" id="nc-spec" placeholder="ex: Sortimento 10Ω – 1MΩ"/></div>
+            <div class="field"><label>Quantidade</label><input type="text" id="nc-qty" placeholder="ex: 500 unidades ou A definir"/></div>
+          </div>
+          <div class="field-group">
+            <div class="field"><label>Status *</label>
+              <select id="nc-status">
+                <option value="ok">✅ Disponível</option>
+                <option value="low">⚠️ Limitado</option>
+                <option value="out">❌ Esgotado</option>
+              </select>
+            </div>
+            <div></div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-blue btn-sm" onclick="addComponent()">✅ Adicionar ao Inventário</button>
+            <button class="btn btn-sm" style="background:#fff;border:1.5px solid var(--border);color:var(--text-muted);cursor:pointer;" onclick="clearCompForm()">Limpar</button>
+          </div>
+        </div>
+
+        <!-- Tabela de componentes -->
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead><tr><th>#</th><th>Nome</th><th>Categoria</th><th>Especificação</th><th>Qtd</th><th>Status</th><th>Ações</th></tr></thead>
+            <tbody id="admin-comp-tbody"></tbody>
+          </table>
+        </div>
+        <p class="form-note" id="comp-count-note"></p>
+      </div>
+
+      <!-- TAB: DATASHEETS -->
+      <div class="admin-tab-panel" id="tab-ds">
+        <h3 style="font-family:'Merriweather',serif;color:var(--usp-blue);margin-bottom:4px;">Gerenciar Datasheets</h3>
+        <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:20px;">Faça upload de PDFs de datasheets. Os arquivos são armazenados localmente no navegador.</p>
+
+        <!-- Formulário de upload -->
+        <div style="background:#f7f8fa;border-radius:10px;padding:20px;margin-bottom:24px;border:1px solid var(--border);">
+          <h4 style="color:var(--usp-blue);margin-bottom:14px;font-size:0.95rem;">⬆️ Adicionar Novo Datasheet</h4>
+          <div class="field-group">
+            <div class="field"><label>Nome do Componente *</label><input type="text" id="nd-nome" placeholder="ex: LM741"/></div>
+            <div class="field"><label>Categoria *</label>
+              <select id="nd-cat">
+                <option value="">Selecione...</option>
+                <option value="amp-op">Amplificador Operacional</option>
+                <option value="transistor">Transistor</option>
+                <option value="ci-digital">CI Digital</option>
+                <option value="sensor">Sensor</option>
+                <option value="mcu">Microcontrolador</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-group full">
+            <div class="field"><label>Descrição Curta</label><input type="text" id="nd-desc" placeholder="ex: Amplificador operacional clássico, uso geral."/></div>
+          </div>
+
+          <!-- Upload zone -->
+          <div class="upload-zone" id="upload-zone" onclick="document.getElementById('ds-file-input').click()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')document.getElementById('ds-file-input').click()">
+            <input type="file" id="ds-file-input" accept=".pdf" style="display:none" onchange="handleFileSelect(this)"/>
+            <div class="uz-icon">📁</div>
+            <p><strong>Clique aqui</strong> ou arraste o arquivo PDF</p>
+            <p style="font-size:0.78rem;margin-top:4px;">Somente arquivos .PDF são aceitos</p>
+          </div>
+          <div class="upload-preview" id="upload-preview">
+            <span>📄</span>
+            <span id="upload-filename">—</span>
+            <span id="upload-filesize" style="margin-left:auto;font-size:0.8rem;color:#276627;"></span>
+          </div>
+
+          <div class="form-actions" style="margin-top:16px;">
+            <button class="btn btn-blue btn-sm" onclick="addDatasheet()">✅ Adicionar Datasheet</button>
+            <button class="btn btn-sm" style="background:#fff;border:1.5px solid var(--border);color:var(--text-muted);cursor:pointer;" onclick="clearDsForm()">Limpar</button>
+          </div>
+          <p class="form-note">⚠️ Os PDFs são salvos no armazenamento local do navegador. Tamanho máximo recomendado: ~4 MB por arquivo.</p>
+        </div>
+
+        <!-- Tabela de datasheets -->
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead><tr><th>#</th><th>Nome</th><th>Categoria</th><th>Descrição</th><th>Tamanho</th><th>Ações</th></tr></thead>
+            <tbody id="admin-ds-tbody"></tbody>
+          </table>
+        </div>
+        <p class="form-note" id="ds-count-note"></p>
+      </div>
+
+      <!-- TAB: CONFIGURAÇÕES -->
+      <div class="admin-tab-panel" id="tab-cfg">
+        <h3 style="font-family:'Merriweather',serif;color:var(--usp-blue);margin-bottom:4px;">Configurações</h3>
+        <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:24px;">Gerencie as configurações do painel administrativo.</p>
+
+        <div style="background:#f7f8fa;border-radius:10px;padding:20px;border:1px solid var(--border);margin-bottom:20px;">
+          <h4 style="color:var(--usp-blue);margin-bottom:14px;font-size:0.95rem;">🔑 Alterar Senha de Acesso</h4>
+          <div class="field-group">
+            <div class="field"><label>Senha Atual</label><input type="password" id="cfg-old-pwd" placeholder="Senha atual"/></div>
+          </div>
+          <div class="field-group">
+            <div class="field"><label>Nova Senha</label><input type="password" id="cfg-new-pwd" placeholder="Nova senha (mín. 6 caracteres)"/></div>
+            <div class="field"><label>Confirmar Nova Senha</label><input type="password" id="cfg-new-pwd2" placeholder="Repita a nova senha"/></div>
+          </div>
+          <button class="btn btn-blue btn-sm" onclick="changePassword()" style="margin-top:10px;">Salvar Nova Senha</button>
+        </div>
+
+        <div style="background:#fff5f5;border-radius:10px;padding:20px;border:1px solid #fecaca;">
+          <h4 style="color:#c0392b;margin-bottom:10px;font-size:0.95rem;">⚠️ Zona de Perigo</h4>
+          <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:14px;">Estas ações são irreversíveis. Use com cautela.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <button class="btn-danger" onclick="confirmResetComponents()">🗑️ Apagar todos os componentes</button>
+            <button class="btn-danger" onclick="confirmResetDatasheets()">🗑️ Apagar todos os datasheets</button>
+          </div>
+        </div>
+
+        <div style="margin-top:20px;background:#f7f8fa;border-radius:10px;padding:20px;border:1px solid var(--border);">
+          <h4 style="color:var(--usp-blue);margin-bottom:10px;font-size:0.95rem;">ℹ️ Informações do Sistema</h4>
+          <p style="font-size:0.85rem;color:var(--text-muted);" id="cfg-info"></p>
+        </div>
+      </div>
+
+    </div><!-- /admin-panel -->
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- MODAL CONFIRMACAO -->
+<div id="confirm-overlay" style="display:none;position:fixed;inset:0;z-index:3000;background:rgba(0,20,50,0.7);align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:14px;padding:36px 32px;max-width:380px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,0.35);text-align:center;">
+    <div style="font-size:2.2rem;margin-bottom:12px;">⚠️</div>
+    <h3 style="font-family:'Merriweather',serif;color:#1a1a2e;margin-bottom:10px;font-size:1.05rem;" id="confirm-title">Confirmar ação</h3>
+    <p style="color:#5a6475;font-size:0.9rem;margin-bottom:24px;" id="confirm-msg">Tem certeza?</p>
+    <div style="display:flex;gap:12px;justify-content:center;">
+      <button style="padding:10px 24px;border-radius:7px;border:1.5px solid #dde3ec;background:#fff;color:#5a6475;font-size:0.9rem;font-weight:700;cursor:pointer;font-family:inherit;" onclick="resolveConfirm(false)">Cancelar</button>
+      <button style="padding:10px 24px;border-radius:7px;border:none;background:#c0392b;color:#fff;font-size:0.9rem;font-weight:700;cursor:pointer;font-family:inherit;" onclick="resolveConfirm(true)">Confirmar</button>
+    </div>
+  </div>
+</div>
+
 <script>
-// ===== MENU MOBILE =====
+// =====================================================================
+// DADOS PADRÃO (fallback caso localStorage esteja vazio)
+// =====================================================================
+const DEFAULT_COMPONENTS = [
+  { id: 1, nome: 'Resistor 1/4W',        cat: 'Resistor',        spec: 'Sortimento: 10Ω – 1MΩ',    qty: 'A definir', status: 'ok' },
+  { id: 2, nome: 'Capacitor Eletrolítico',cat: 'Capacitor',       spec: '10µF – 1000µF / 25V–50V',  qty: 'A definir', status: 'ok' },
+  { id: 3, nome: 'BC548 / BC558',        cat: 'Transistor',      spec: 'NPN / PNP BJT',             qty: 'A definir', status: 'ok' },
+  { id: 4, nome: 'LM741',               cat: 'CI',              spec: 'Amplificador Operacional',   qty: 'A definir', status: 'ok' },
+  { id: 5, nome: '1N4007',              cat: 'Diodo',           spec: 'Retificador 1A / 1000V',    qty: 'A definir', status: 'ok' },
+  { id: 6, nome: 'Arduino Uno',         cat: 'Microcontrolador',spec: 'ATmega328P / 5V',           qty: 'A definir', status: 'low' },
+];
+
+const DEFAULT_DATASHEETS = [
+  { id: 1, nome: 'LM741',      cat: 'amp-op',    desc: 'Amplificador operacional clássico, uso geral.',            size: null, data: null, url: 'datasheets/lm741.pdf',      external: true },
+  { id: 2, nome: 'BC548',      cat: 'transistor',desc: 'Transistor BJT NPN de uso geral, baixa potência.',         size: null, data: null, url: 'datasheets/bc548.pdf',      external: true },
+  { id: 3, nome: 'IRF540N',    cat: 'transistor',desc: 'MOSFET canal N para aplicações de potência, 100V/28A.',    size: null, data: null, url: 'datasheets/irf540n.pdf',    external: true },
+  { id: 4, nome: '74HC00',     cat: 'ci-digital', desc: 'Quádruplo porta NAND de 2 entradas, família CMOS 74HC.',  size: null, data: null, url: 'datasheets/74hc00.pdf',     external: true },
+  { id: 5, nome: 'ATmega328P', cat: 'mcu',       desc: 'Microcontrolador AVR de 8 bits, base do Arduino Uno.',    size: null, data: null, url: 'datasheets/atmega328p.pdf', external: true },
+  { id: 6, nome: 'DHT22',      cat: 'sensor',    desc: 'Sensor digital de temperatura e umidade relativa do ar.', size: null, data: null, url: 'datasheets/dht22.pdf',      external: true },
+];
+
+// =====================================================================
+// STORAGE HELPERS
+// =====================================================================
+const STORAGE_KEYS = { components: 'eel_lab_components', datasheets: 'eel_lab_datasheets', password: 'eel_lab_pwd', initialized: 'eel_lab_init' };
+
+function loadComponents() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEYS.components);
+    return raw ? JSON.parse(raw) : null;
+  } catch(e) { return null; }
+}
+function saveComponents(arr) {
+  localStorage.setItem(STORAGE_KEYS.components, JSON.stringify(arr));
+}
+function loadDatasheets() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEYS.datasheets);
+    return raw ? JSON.parse(raw) : null;
+  } catch(e) { return null; }
+}
+function saveDatasheets(arr) {
+  localStorage.setItem(STORAGE_KEYS.datasheets, JSON.stringify(arr));
+}
+function getPassword() {
+  return localStorage.getItem(STORAGE_KEYS.password) || 'eel2025';
+}
+function setPassword(p) {
+  localStorage.setItem(STORAGE_KEYS.password, p);
+}
+
+// =====================================================================
+// STATE
+// =====================================================================
+let components = [];
+let datasheets = [];
+let compPage   = 1;
+let dsPage     = 1;
+let dsActiveCat= 'all';
+let compFiltered = [];
+let dsFiltered   = [];
+let pendingFileData = null;   // base64 do PDF em upload
+let pendingFileName = '';
+let pendingFileSize = 0;
+const COMP_PER_PAGE = 5;
+const DS_PER_PAGE   = 8;
+
+// =====================================================================
+// INIT
+// =====================================================================
+window.addEventListener('DOMContentLoaded', () => {
+  // Carrega dados
+  const storedComp = loadComponents();
+  components = storedComp !== null ? storedComp : [...DEFAULT_COMPONENTS];
+  const storedDs = loadDatasheets();
+  datasheets = storedDs !== null ? storedDs : [...DEFAULT_DATASHEETS];
+
+  if (!storedComp) saveComponents(components);
+  if (!storedDs)   saveDatasheets(datasheets);
+
+  renderPublicComponents();
+  renderPublicDatasheets();
+  updateStats();
+
+  // Scroll to top btn
+  const scrollBtn = document.getElementById('scroll-top-btn');
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+
+  // Drag & drop para upload zone
+  const zone = document.getElementById('upload-zone');
+  zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
+  zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+  zone.addEventListener('drop', e => {
+    e.preventDefault(); zone.classList.remove('drag-over');
+    const file = e.dataTransfer.files[0];
+    if (file) processFile(file);
+  });
+});
+
+// =====================================================================
+// MODAL DE CONFIRMAÇÃO (substitui confirm() bloqueado em iframes)
+// =====================================================================
+let _confirmResolve = null;
+
+function showConfirm(title, msg) {
+  return new Promise(resolve => {
+    _confirmResolve = resolve;
+    document.getElementById('confirm-title').textContent = title;
+    document.getElementById('confirm-msg').textContent   = msg;
+    const ov = document.getElementById('confirm-overlay');
+    ov.style.display = 'flex';
+  });
+}
+function resolveConfirm(result) {
+  document.getElementById('confirm-overlay').style.display = 'none';
+  if (_confirmResolve) { _confirmResolve(result); _confirmResolve = null; }
+}
+
+// =====================================================================
+// MENU
+// =====================================================================
 function toggleMenu() { document.getElementById('main-nav').classList.toggle('open'); }
 function closeMenu()  { document.getElementById('main-nav').classList.remove('open'); }
 
-// ===== SCROLL TO TOP =====
-const scrollBtn = document.getElementById('scroll-top-btn');
-window.addEventListener('scroll', () => {
-  scrollBtn.classList.toggle('visible', window.scrollY > 400);
-});
+// =====================================================================
+// TOAST
+// =====================================================================
+let toastTimer;
+function showToast(msg, type='success') {
+  const t = document.getElementById('toast');
+  t.textContent = (type === 'success' ? '✅ ' : '❌ ') + msg;
+  t.className = 'toast ' + type + ' show';
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 3200);
+}
 
-// =========================================================
-// ===== COMPONENTES – busca por NOME + categoria + paginação
-// =========================================================
-const COMP_PER_PAGE = 5;
-let compPage = 1;
-let compFiltered = []; // linhas visíveis após filtro
+// =====================================================================
+// STATS
+// =====================================================================
+function updateStats() {
+  document.getElementById('stat-comp').textContent = components.length;
+  document.getElementById('stat-ds').textContent   = datasheets.length;
+}
+
+// =====================================================================
+// PUBLIC: COMPONENTES
+// =====================================================================
+const STATUS_LABELS = { ok: 'Disponível', low: 'Limitado', out: 'Esgotado' };
+const STATUS_CLASS  = { ok: 'badge-ok', low: 'badge-low', out: 'badge-out' };
+const CAT_LABELS = {
+  'Resistor':'Resistor','Capacitor':'Capacitor','Transistor':'Transistor',
+  'CI':'CI','Diodo':'Diodo','Indutor':'Indutor',
+  'Microcontrolador':'Microcontrolador','Sensor':'Sensor','Outro':'Outro'
+};
+const DS_CAT_LABELS = {
+  'amp-op':'Amp. Operacional','transistor':'Transistor','ci-digital':'CI Digital',
+  'sensor':'Sensor','mcu':'Microcontrolador','outro':'Outro'
+};
 
 function compSearch() {
   const query = document.getElementById('comp-search-input').value.trim().toLowerCase();
   const cat   = document.getElementById('comp-cat-filter').value;
-  const rows  = Array.from(document.querySelectorAll('#comp-tbody tr'));
-
-  // Filtra apenas pelo NOME (data-nome) e categoria (data-cat)
-  compFiltered = rows.filter(row => {
-    const nome    = (row.getAttribute('data-nome') || '').toLowerCase();
-    const rowCat  = row.getAttribute('data-cat') || '';
-    const matchQ  = !query || nome.includes(query);
-    const matchC  = !cat   || rowCat === cat;
+  compFiltered = components.filter(c => {
+    const matchQ = !query || c.nome.toLowerCase().includes(query) || c.spec.toLowerCase().includes(query);
+    const matchC = !cat   || c.cat === cat;
     return matchQ && matchC;
   });
-
   compPage = 1;
-  renderCompPage();
+  renderCompTable();
 }
 
-function renderCompPage() {
-  const rows = Array.from(document.querySelectorAll('#comp-tbody tr'));
+function renderPublicComponents() {
+  compFiltered = [...components];
+  renderCompTable();
+}
 
-  // Oculta tudo
-  rows.forEach(r => r.style.display = 'none');
-
-  const total = compFiltered.length;
+function renderCompTable() {
+  const tbody = document.getElementById('comp-tbody');
+  tbody.innerHTML = '';
+  const total      = compFiltered.length;
   const totalPages = Math.max(1, Math.ceil(total / COMP_PER_PAGE));
   compPage = Math.min(compPage, totalPages);
-
   const start = (compPage - 1) * COMP_PER_PAGE;
-  const end   = start + COMP_PER_PAGE;
-  compFiltered.slice(start, end).forEach(r => r.style.display = '');
+  const slice = compFiltered.slice(start, start + COMP_PER_PAGE);
 
-  // Info
-  const infoEl = document.getElementById('comp-pag-info');
-  if (total === 0) {
-    infoEl.textContent = 'Nenhum componente encontrado.';
+  if (slice.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--text-muted);padding:28px;">Nenhum componente encontrado.</td></tr>';
   } else {
-    infoEl.textContent = `Exibindo ${start + 1}–${Math.min(end, total)} de ${total} componente${total !== 1 ? 's' : ''}`;
+    slice.forEach((c, i) => {
+      const num = String(start + i + 1).padStart(3, '0');
+      tbody.innerHTML += `
+        <tr>
+          <td>${num}</td>
+          <td>${escHtml(c.nome)}</td>
+          <td>${escHtml(c.cat)}</td>
+          <td>${escHtml(c.spec)}</td>
+          <td>${escHtml(c.qty)}</td>
+          <td><span class="status-badge ${STATUS_CLASS[c.status]}">${STATUS_LABELS[c.status]}</span></td>
+        </tr>`;
+    });
   }
 
-  renderPaginator('comp-pag-btns', compPage, totalPages, (p) => {
-    compPage = p;
-    renderCompPage();
-  });
+  const infoEl = document.getElementById('comp-pag-info');
+  infoEl.textContent = total === 0 ? '' : `Exibindo ${start+1}–${Math.min(start+COMP_PER_PAGE,total)} de ${total} componente${total!==1?'s':''}`;
+  renderPaginator('comp-pag-btns', compPage, totalPages, p => { compPage=p; renderCompTable(); });
 }
 
-// =========================================================
-// ===== DATASHEETS – filtro por categoria + paginação lateral
-// =========================================================
-const DS_PER_PAGE = 5;
-let dsPage = 1;
-let dsActiveCat = 'all';
-let dsVisible = []; // cards visíveis após filtro
-
+// =====================================================================
+// PUBLIC: DATASHEETS
+// =====================================================================
 function dsFilter(btn, cat) {
   document.querySelectorAll('.ds-filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   dsActiveCat = cat;
   dsPage = 1;
-  renderDsPage();
+  renderPublicDatasheets();
 }
 
-function renderDsPage() {
-  const allCards = Array.from(document.querySelectorAll('#ds-track .ds-card'));
-  dsVisible = allCards.filter(c =>
-    dsActiveCat === 'all' || c.getAttribute('data-cat') === dsActiveCat
-  );
+function renderPublicDatasheets() {
+  dsFiltered = dsActiveCat === 'all' ? [...datasheets] : datasheets.filter(d => d.cat === dsActiveCat);
+  renderDsGrid();
+}
 
-  const total = dsVisible.length;
+function renderDsGrid() {
+  const grid = document.getElementById('ds-grid');
+  const total = dsFiltered.length;
   const totalPages = Math.max(1, Math.ceil(total / DS_PER_PAGE));
   dsPage = Math.min(dsPage, totalPages);
-
-  // Calcula largura de um card (incluindo gap)
-  // Usamos o track pai para calcular offset
-  const track = document.getElementById('ds-track');
-  const gap = 20; // px, deve coincidir com o CSS gap
-
-  // Reordena o track: coloca os cards visíveis da página atual primeiro,
-  // mas é mais simples controlar via translate.
-  // Aqui usamos abordagem de mostrar/ocultar + scroll virtual:
-  // Escondemos todos, mostramos apenas os da página atual e reposicionamos.
-
-  // Limpa exibição
-  allCards.forEach(c => {
-    c.style.display = 'none';
-    c.style.minWidth = '';
-  });
-
   const start = (dsPage - 1) * DS_PER_PAGE;
-  const pageCards = dsVisible.slice(start, start + DS_PER_PAGE);
+  const slice = dsFiltered.slice(start, start + DS_PER_PAGE);
 
-  pageCards.forEach(c => {
-    c.style.display = 'flex';
-  });
-
-  // Reseta translate (sem animação de scroll – mostramos apenas os 5)
-  track.style.transition = 'none';
-  track.style.transform  = 'translateX(0)';
-
-  // Info
-  const infoEl = document.getElementById('ds-pag-info');
-  if (total === 0) {
-    infoEl.textContent = 'Nenhum datasheet encontrado para este filtro.';
+  if (slice.length === 0) {
+    grid.innerHTML = '<div class="ds-empty">Nenhum datasheet encontrado para este filtro.</div>';
   } else {
-    infoEl.textContent = `Exibindo ${start + 1}–${Math.min(start + DS_PER_PAGE, total)} de ${total} datasheet${total !== 1 ? 's' : ''}`;
+    grid.innerHTML = slice.map(d => {
+      const link = d.external ? `href="${escHtml(d.url)}" target="_blank"` :
+                                `href="data:application/pdf;base64,${d.data}" download="${escHtml(d.nome)}.pdf"`;
+      return `
+        <div class="ds-card" data-cat="${escHtml(d.cat)}">
+          <div class="ds-card-header">
+            <div class="ds-icon">📄</div>
+            <div><h4>${escHtml(d.nome)}</h4><span class="ds-cat">${escHtml(DS_CAT_LABELS[d.cat]||d.cat)}</span></div>
+          </div>
+          <p class="ds-desc">${escHtml(d.desc)}</p>
+          <a ${link}>⬇ Baixar PDF${d.size ? ' ('+formatSize(d.size)+')' : ''}</a>
+        </div>`;
+    }).join('');
   }
 
-  renderPaginator('ds-pag-btns', dsPage, totalPages, (p) => {
-    dsPage = p;
-    renderDsPage();
-  });
+  const infoEl = document.getElementById('ds-pag-info');
+  infoEl.textContent = total === 0 ? '' : `Exibindo ${start+1}–${Math.min(start+DS_PER_PAGE,total)} de ${total} datasheet${total!==1?'s':''}`;
+  renderPaginator('ds-pag-btns', dsPage, totalPages, p => { dsPage=p; renderDsGrid(); });
 }
 
-// =========================================================
-// ===== PAGINADOR GENÉRICO
-// =========================================================
+// =====================================================================
+// PAGINADOR
+// =====================================================================
 function renderPaginator(containerId, currentPage, totalPages, onPageChange) {
   const container = document.getElementById(containerId);
   container.innerHTML = '';
-
-  // Botão anterior
-  const prev = document.createElement('button');
-  prev.className = 'pg-btn pg-arrow';
-  prev.textContent = '‹';
-  prev.disabled = currentPage <= 1;
-  prev.onclick = () => { if (currentPage > 1) onPageChange(currentPage - 1); };
+  if (totalPages <= 1) return;
+  const prev = mkPgBtn('‹', currentPage <= 1, () => onPageChange(currentPage-1));
   container.appendChild(prev);
-
-  // Números de página (máx. 7 botões visíveis)
-  const pages = getPageNumbers(currentPage, totalPages);
-  pages.forEach(p => {
+  getPageNumbers(currentPage, totalPages).forEach(p => {
     if (p === '…') {
-      const el = document.createElement('span');
-      el.className = 'pg-btn';
-      el.style.cursor = 'default';
-      el.textContent = '…';
+      const el = document.createElement('button');
+      el.className='pg-btn'; el.style.cursor='default'; el.textContent='…'; el.disabled=true;
       container.appendChild(el);
     } else {
-      const btn = document.createElement('button');
-      btn.className = 'pg-btn' + (p === currentPage ? ' active' : '');
-      btn.textContent = p;
-      btn.onclick = () => onPageChange(p);
-      container.appendChild(btn);
+      container.appendChild(mkPgBtn(p, false, () => onPageChange(p), p===currentPage));
     }
   });
-
-  // Botão próximo
-  const next = document.createElement('button');
-  next.className = 'pg-btn pg-arrow';
-  next.textContent = '›';
-  next.disabled = currentPage >= totalPages;
-  next.onclick = () => { if (currentPage < totalPages) onPageChange(currentPage + 1); };
-  container.appendChild(next);
+  container.appendChild(mkPgBtn('›', currentPage >= totalPages, () => onPageChange(currentPage+1)));
 }
-
+function mkPgBtn(label, disabled, onClick, active=false) {
+  const btn = document.createElement('button');
+  btn.className = 'pg-btn' + (active ? ' active' : '');
+  btn.textContent = label; btn.disabled = disabled;
+  btn.onclick = onClick;
+  return btn;
+}
 function getPageNumbers(current, total) {
-  if (total <= 7) return Array.from({length: total}, (_, i) => i + 1);
-  const pages = [];
-  if (current <= 4) {
-    for (let i = 1; i <= 5; i++) pages.push(i);
-    pages.push('…', total);
-  } else if (current >= total - 3) {
-    pages.push(1, '…');
-    for (let i = total - 4; i <= total; i++) pages.push(i);
-  } else {
-    pages.push(1, '…', current - 1, current, current + 1, '…', total);
-  }
-  return pages;
+  if (total <= 7) return Array.from({length:total},(_,i)=>i+1);
+  if (current <= 4) { const p=[]; for(let i=1;i<=5;i++) p.push(i); p.push('…',total); return p; }
+  if (current >= total-3) { const p=[1,'…']; for(let i=total-4;i<=total;i++) p.push(i); return p; }
+  return [1,'…',current-1,current,current+1,'…',total];
 }
 
-// =========================================================
-// ===== INICIALIZAÇÃO
-// =========================================================
-window.addEventListener('DOMContentLoaded', () => {
-  // Stats
-  const totalComp = document.querySelectorAll('#comp-tbody tr').length;
-  const totalDs   = document.querySelectorAll('#ds-track .ds-card').length;
-  document.getElementById('stat-comp').textContent = totalComp;
-  document.getElementById('stat-ds').textContent   = totalDs;
+// =====================================================================
+// ADMIN: LOGIN
+// =====================================================================
+function openAdmin() {
+  document.getElementById('admin-overlay').classList.add('open');
+  document.getElementById('admin-panel').style.display = 'none';
+  document.getElementById('admin-login-panel').style.display = 'block';
+  document.getElementById('admin-password-input').value = '';
+  document.getElementById('login-err').textContent = '';
+  setTimeout(() => document.getElementById('admin-password-input').focus(), 100);
+}
+function closeAdmin() {
+  document.getElementById('admin-overlay').classList.remove('open');
+}
+function overlayClick(e) {
+  if (e.target === document.getElementById('admin-overlay')) closeAdmin();
+}
+function doLogin() {
+  const pwd = document.getElementById('admin-password-input').value;
+  if (pwd === getPassword()) {
+    document.getElementById('admin-login-panel').style.display = 'none';
+    document.getElementById('admin-panel').style.display = 'block';
+    switchTab('tab-comp');
+    renderAdminComponents();
+    renderAdminDatasheets();
+    updateCfgInfo();
+  } else {
+    document.getElementById('login-err').textContent = '❌ Senha incorreta. Tente novamente.';
+    document.getElementById('admin-password-input').select();
+  }
+}
 
-  // Inicializa filtros/paginação
-  compFiltered = Array.from(document.querySelectorAll('#comp-tbody tr'));
-  renderCompPage();
-  renderDsPage();
-});
+// =====================================================================
+// ADMIN: TABS
+// =====================================================================
+function switchTab(id) {
+  document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.admin-tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const idx = ['tab-comp','tab-ds','tab-cfg'].indexOf(id);
+  document.querySelectorAll('.admin-tab')[idx].classList.add('active');
+}
+
+// =====================================================================
+// ADMIN: COMPONENTES
+// =====================================================================
+function renderAdminComponents() {
+  const tbody = document.getElementById('admin-comp-tbody');
+  if (components.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="7" class="admin-empty">Nenhum componente cadastrado.</td></tr>';
+    document.getElementById('comp-count-note').textContent = '';
+    return;
+  }
+  tbody.innerHTML = components.map((c, i) => `
+    <tr id="arow-${c.id}">
+      <td>${String(i+1).padStart(3,'0')}</td>
+      <td>${escHtml(c.nome)}</td>
+      <td>${escHtml(c.cat)}</td>
+      <td>${escHtml(c.spec)}</td>
+      <td>${escHtml(c.qty)}</td>
+      <td><span class="status-badge ${STATUS_CLASS[c.status]}">${STATUS_LABELS[c.status]}</span></td>
+      <td><div class="action-cell">
+        <button class="btn-edit" onclick="editComponentInline(${c.id})">✏️ Editar</button>
+        <button class="btn-danger" onclick="deleteComponent(${c.id})">🗑️</button>
+      </div></td>
+    </tr>`).join('');
+  document.getElementById('comp-count-note').textContent = `Total: ${components.length} componente${components.length!==1?'s':''}`;
+}
+
+function addComponent() {
+  const nome   = document.getElementById('nc-nome').value.trim();
+  const cat    = document.getElementById('nc-cat').value;
+  const spec   = document.getElementById('nc-spec').value.trim();
+  const qty    = document.getElementById('nc-qty').value.trim() || 'A definir';
+  const status = document.getElementById('nc-status').value;
+  if (!nome || !cat) { showToast('Preencha Nome e Categoria.', 'error'); return; }
+  const id = Date.now();
+  components.push({ id, nome, cat, spec, qty, status });
+  saveComponents(components);
+  renderAdminComponents();
+  renderPublicComponents();
+  updateStats();
+  clearCompForm();
+  showToast(`"${nome}" adicionado ao inventário!`);
+}
+
+function clearCompForm() {
+  ['nc-nome','nc-spec','nc-qty'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('nc-cat').value = '';
+  document.getElementById('nc-status').value = 'ok';
+}
+
+async function deleteComponent(id) {
+  id = Number(id);
+  if (!await showConfirm('Remover componente', 'Esta ação é irreversível. Deseja remover este componente do inventário?')) return;
+  components = components.filter(c => Number(c.id) !== id);
+  saveComponents(components);
+  renderAdminComponents();
+  renderPublicComponents();
+  updateStats();
+  showToast('Componente removido.');
+}
+
+function editComponentInline(id) {
+  id = Number(id);
+  // Cancela qualquer edição aberta
+  document.querySelectorAll('.edit-row').forEach(r => r.classList.remove('edit-row'));
+  document.querySelectorAll('[id^="save-btn-"]').forEach(b => b.remove());
+
+  const c = components.find(x => Number(x.id) === id);
+  if (!c) return;
+  const row = document.getElementById(`arow-${id}`);
+  row.classList.add('edit-row');
+  row.innerHTML = `
+    <td>${row.cells[0].textContent}</td>
+    <td><input id="ei-nome" value="${escHtml(c.nome)}"/></td>
+    <td><select id="ei-cat">
+      ${['Resistor','Capacitor','Transistor','CI','Diodo','Indutor','Microcontrolador','Sensor','Outro'].map(v=>`<option value="${v}"${v===c.cat?' selected':''}>${v}</option>`).join('')}
+    </select></td>
+    <td><input id="ei-spec" value="${escHtml(c.spec)}"/></td>
+    <td><input id="ei-qty"  value="${escHtml(c.qty)}" style="width:90px"/></td>
+    <td><select id="ei-status">
+      <option value="ok"${c.status==='ok'?' selected':''}>✅ Disponível</option>
+      <option value="low"${c.status==='low'?' selected':''}>⚠️ Limitado</option>
+      <option value="out"${c.status==='out'?' selected':''}>❌ Esgotado</option>
+    </select></td>
+    <td><div class="action-cell">
+      <button class="btn-edit" onclick="saveComponentEdit(${id})">💾 Salvar</button>
+      <button class="btn-danger" onclick="renderAdminComponents()">✕</button>
+    </div></td>`;
+}
+
+function saveComponentEdit(id) {
+  id = Number(id);
+  const nome   = document.getElementById('ei-nome').value.trim();
+  const cat    = document.getElementById('ei-cat').value;
+  const spec   = document.getElementById('ei-spec').value.trim();
+  const qty    = document.getElementById('ei-qty').value.trim() || 'A definir';
+  const status = document.getElementById('ei-status').value;
+  if (!nome || !cat) { showToast('Nome e Categoria são obrigatórios.', 'error'); return; }
+  const idx = components.findIndex(c => Number(c.id) === id);
+  if (idx === -1) return;
+  components[idx] = { id, nome, cat, spec, qty, status };
+  saveComponents(components);
+  renderAdminComponents();
+  renderPublicComponents();
+  updateStats();
+  showToast('Componente atualizado!');
+}
+
+// =====================================================================
+// ADMIN: DATASHEETS
+// =====================================================================
+function handleFileSelect(input) {
+  const file = input.files[0];
+  if (file) processFile(file);
+}
+
+function processFile(file) {
+  if (!file.name.toLowerCase().endsWith('.pdf')) {
+    showToast('Somente arquivos PDF são aceitos.', 'error'); return;
+  }
+  if (file.size > 6 * 1024 * 1024) {
+    showToast('Arquivo muito grande (máx. 6 MB).', 'error'); return;
+  }
+  const reader = new FileReader();
+  reader.onload = e => {
+    const b64 = e.target.result.split(',')[1];
+    pendingFileData = b64;
+    pendingFileName = file.name;
+    pendingFileSize = file.size;
+    document.getElementById('upload-filename').textContent = file.name;
+    document.getElementById('upload-filesize').textContent = formatSize(file.size);
+    document.getElementById('upload-preview').classList.add('show');
+    // Pre-fill nome se vazio
+    const nomeInput = document.getElementById('nd-nome');
+    if (!nomeInput.value) {
+      nomeInput.value = file.name.replace(/\.pdf$/i,'').replace(/[-_]/g,' ').replace(/\b\w/g,l=>l.toUpperCase());
+    }
+  };
+  reader.readAsDataURL(file);
+}
+
+function addDatasheet() {
+  const nome = document.getElementById('nd-nome').value.trim();
+  const cat  = document.getElementById('nd-cat').value;
+  const desc = document.getElementById('nd-desc').value.trim();
+  if (!nome || !cat) { showToast('Preencha Nome e Categoria.', 'error'); return; }
+  if (!pendingFileData) { showToast('Selecione um arquivo PDF.', 'error'); return; }
+  const id = Date.now();
+  datasheets.push({ id, nome, cat, desc, size: pendingFileSize, data: pendingFileData, external: false });
+  saveDatasheets(datasheets);
+  renderAdminDatasheets();
+  renderPublicDatasheets();
+  updateStats();
+  clearDsForm();
+  showToast(`Datasheet "${nome}" adicionado!`);
+}
+
+function clearDsForm() {
+  document.getElementById('nd-nome').value = '';
+  document.getElementById('nd-cat').value  = '';
+  document.getElementById('nd-desc').value = '';
+  document.getElementById('ds-file-input').value = '';
+  document.getElementById('upload-preview').classList.remove('show');
+  pendingFileData = null;
+  pendingFileName = '';
+  pendingFileSize = 0;
+}
+
+function renderAdminDatasheets() {
+  const tbody = document.getElementById('admin-ds-tbody');
+  if (datasheets.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="6" class="admin-empty">Nenhum datasheet cadastrado.</td></tr>';
+    document.getElementById('ds-count-note').textContent = '';
+    return;
+  }
+  tbody.innerHTML = datasheets.map((d, i) => `
+    <tr>
+      <td>${String(i+1).padStart(3,'0')}</td>
+      <td>${escHtml(d.nome)}</td>
+      <td>${escHtml(DS_CAT_LABELS[d.cat]||d.cat)}</td>
+      <td>${escHtml(d.desc)}</td>
+      <td>${d.size ? formatSize(d.size) : (d.external ? 'Link externo' : '—')}</td>
+      <td><div class="action-cell">
+        ${d.external
+          ? `<a class="btn-edit" href="${escHtml(d.url)}" target="_blank" style="text-decoration:none;display:inline-flex;align-items:center;gap:4px;">👁 Ver</a>`
+          : `<button class="btn-edit" onclick="previewDs(${d.id})">👁 Ver</button>`
+        }
+        <button class="btn-danger" onclick="deleteDatasheet(${d.id})">🗑️</button>
+      </div></td>
+    </tr>`).join('');
+  document.getElementById('ds-count-note').textContent = `Total: ${datasheets.length} datasheet${datasheets.length!==1?'s':''}`;
+}
+
+function previewDs(id) {
+  id = Number(id);
+  const d = datasheets.find(x => Number(x.id) === id);
+  if (!d || !d.data) return;
+  const win = window.open();
+  win.document.write(`<iframe src="data:application/pdf;base64,${d.data}" style="width:100%;height:100%;border:none;"></iframe>`);
+}
+
+async function deleteDatasheet(id) {
+  id = Number(id);
+  if (!await showConfirm('Remover datasheet', 'Esta ação é irreversível. Deseja remover este datasheet?')) return;
+  datasheets = datasheets.filter(d => Number(d.id) !== id);
+  saveDatasheets(datasheets);
+  renderAdminDatasheets();
+  renderPublicDatasheets();
+  updateStats();
+  showToast('Datasheet removido.');
+}
+
+// =====================================================================
+// ADMIN: CONFIGURAÇÕES
+// =====================================================================
+function changePassword() {
+  const old  = document.getElementById('cfg-old-pwd').value;
+  const n1   = document.getElementById('cfg-new-pwd').value;
+  const n2   = document.getElementById('cfg-new-pwd2').value;
+  if (old !== getPassword()) { showToast('Senha atual incorreta.', 'error'); return; }
+  if (n1.length < 6)         { showToast('Nova senha muito curta (mín. 6 caracteres).', 'error'); return; }
+  if (n1 !== n2)             { showToast('As senhas não coincidem.', 'error'); return; }
+  setPassword(n1);
+  ['cfg-old-pwd','cfg-new-pwd','cfg-new-pwd2'].forEach(id => document.getElementById(id).value='');
+  showToast('Senha alterada com sucesso!');
+}
+
+async function confirmResetComponents() {
+  if (!await showConfirm('Apagar tudo', 'Atenção: isso irá apagar TODOS os componentes do inventário. Esta ação é irreversível.')) return;
+  components = [];
+  saveComponents(components);
+  renderAdminComponents();
+  renderPublicComponents();
+  updateStats();
+  showToast('Todos os componentes foram removidos.', 'error');
+}
+async function confirmResetDatasheets() {
+  if (!await showConfirm('Apagar tudo', 'Atenção: isso irá apagar TODOS os datasheets (incluindo PDFs enviados). Esta ação é irreversível.')) return;
+  datasheets = [];
+  saveDatasheets(datasheets);
+  renderAdminDatasheets();
+  renderPublicDatasheets();
+  updateStats();
+  showToast('Todos os datasheets foram removidos.', 'error');
+}
+
+function updateCfgInfo() {
+  let used = 0;
+  try {
+    for (let k in localStorage) {
+      if (k.startsWith('eel_lab')) used += (localStorage[k].length * 2);
+    }
+  } catch(e){}
+  document.getElementById('cfg-info').innerHTML =
+    `Componentes cadastrados: <strong>${components.length}</strong><br>
+     Datasheets cadastrados: <strong>${datasheets.length}</strong><br>
+     Espaço usado no armazenamento local: <strong>${formatSize(used)}</strong><br>
+     Limite aproximado do armazenamento local: <strong>5 MB</strong>`;
+}
+
+// =====================================================================
+// UTILS
+// =====================================================================
+function escHtml(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function formatSize(bytes) {
+  if (!bytes) return '—';
+  if (bytes < 1024) return bytes + ' B';
+  if (bytes < 1024*1024) return (bytes/1024).toFixed(1) + ' KB';
+  return (bytes/(1024*1024)).toFixed(2) + ' MB';
+}
 </script>
 </body>
 </html>
